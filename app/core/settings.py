@@ -31,10 +31,9 @@ env.read_env(BASE_DIR.parent / ".env")
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
+DEBUG = env("DEBUG", cast=bool)
 
-ALLOWED_HOSTS: list[str] = env("ALLOWED_HOSTS")
-
+ALLOWED_HOSTS: list[str] = env("ALLOWED_HOSTS", cast=list[str])
 
 # Application definition
 
