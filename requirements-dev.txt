@@ -4,5 +4,6 @@
 Coverage
 Pre-Commit
 PyTest
+Pytest-Django
 PyTest-HTML
 Tox
