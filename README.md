@@ -104,3 +104,12 @@ Run multiple code quality tools on git-staged code.
 ```shell
 pre-commit run --all-files
 ```
+
+## App Template
+
+Use the provided app template for new apps
+
+```shell
+mkdir app\<app-name>
+django-admin startapp <app-name> app\<app-name> --template=app_template
+```
