@@ -33,6 +33,9 @@ if exist db.sqlite3 (
 python app/manage.py makemigrations
 python app/manage.py migrate
 
+:: Delete migrations during development
+:: del app\user\migrations\0001_initial.py
+
 :: Create super user
 if not defined DJANGO_SUPERUSER_USERNAME (
     set DJANGO_SUPERUSER_USERNAME=user
@@ -41,3 +44,6 @@ if not defined DJANGO_SUPERUSER_USERNAME (
 )
 
 python app\manage.py createsuperuser --noinput
+
+:: Load data
+:: python app/manage.py loaddata users
